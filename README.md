@@ -29,23 +29,21 @@ Other libraries we use include: (but you are free to use whatever you want)
   - [ ] Cancel a service request
   - [ ] Update the details of the service request
 
-### Bonus
+##### Bonus
 - [ ] Add specs for your components, or E2E tests.
 - [ ] Add filtering to the provider list based on the API's filtering options.
 
 
 ## Accessing and Developing the Client
 
-You can choose to develop the client in any way you wish. The `docker-compose.yml` file in the root of this repository will start the client and server for you. But you can also choose to run the client and server separately.
-
-The client is a standard `create-react-app` project. You can run it with `yarn start` or `npm start`, and it will be available at `http://localhost:3000`.
+You can choose to develop the client in any way you wish. The `docker-compose.yml` file in the root of this repository will start the client and server for you. But you can also choose to run the client and server separately. Instructions for both are below.
 
 ## Running the server
 
 
 The server is a simple Ruby on Rails app, but you don't need to know Ruby nor have it installed to run it. You will need to have [Docker](https://docs.docker.com/get-docker/) installed.
 
-##### Running the server and client with docker-compose
+##### Option 1: Running the server and client with docker-compose
 
 1. Clone the repo: `git clone https://github.com/listminut/frontend-technical-challenge.git`
 
@@ -57,7 +55,7 @@ The server is a simple Ruby on Rails app, but you don't need to know Ruby nor ha
 
 Don't hesitate to reach out if you have any questions or run into any issues.
 
-##### Running the server and client separately
+##### Option 2: Running the server and client separately
 
 1. Clone the repo: `git clone https://github.com/listminut/frontend-technical-challenge.git`
 
