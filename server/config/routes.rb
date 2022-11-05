@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  mount Rswag::Ui::Engine, at: '/api-docs'
+
+  resources :service_requests, only: [:show, :create, :update, :destroy]
+  resources :service_providers, only: [:index]
+  resources :zones, only: [:index]
+  resources :categories, only: [:index]
 end

@@ -18,11 +18,12 @@ RUN apt-get clean && apt-get update && apt-get -yq dist-upgrade \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && truncate -s 0 /var/log/*log
 
-COPY . /app/
 COPY Gemfile* /app/
 
 RUN gem install bundler
 RUN bundle install
+
+COPY . /app/
 
 EXPOSE $PORT
 

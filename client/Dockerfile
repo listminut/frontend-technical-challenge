@@ -11,10 +11,11 @@ RUN apt-get clean && apt-get update && apt-get -yq dist-upgrade \
     && truncate -s 0 /var/log/*log
 
 WORKDIR /app
-COPY . /app/
-COPY package.json /app/
 
+COPY package.json /app/
 RUN yarn install
+
+COPY . /app/
 
 EXPOSE 3000
 

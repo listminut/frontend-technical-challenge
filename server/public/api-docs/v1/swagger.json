@@ -1,0 +1,300 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/categories": {
+      "get": {
+        "summary": "list categories",
+        "tags": [
+          "Categories"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/service_providers": {
+      "get": {
+        "summary": "list service_providers",
+        "tags": [
+          "Service Providers"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of records per page",
+            "default": 10,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Search query on first name, last name, bio, category names and action zone names",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category_ids",
+            "in": "query",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Category ids",
+            "schema": {
+              "type": "array"
+            }
+          },
+          {
+            "name": "action_zone_ids",
+            "in": "query",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Action zone ids",
+            "schema": {
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "first_name": {
+                        "type": "string"
+                      },
+                      "last_name": {
+                        "type": "string"
+                      },
+                      "bio": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "category_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      },
+                      "zone_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "first_name",
+                      "last_name",
+                      "bio",
+                      "created_at",
+                      "updated_at",
+                      "category_ids",
+                      "zone_ids"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/service_requests": {
+      "post": {
+        "summary": "create service_request",
+        "tags": [
+          "Service Requests"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "201": {
+            "description": "successful"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "service_request": {
+                    "type": "object",
+                    "properties": {
+                      "service_provider_id": {
+                        "type": "integer"
+                      },
+                      "zone_id": {
+                        "type": "integer"
+                      },
+                      "category_id": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "service_provider_id",
+                      "zone_id",
+                      "category_id",
+                      "title",
+                      "description"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/service_requests/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show service_request",
+        "tags": [
+          "Service Requests"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update service_request",
+        "tags": [
+          "Service Requests"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "service_request": {
+                    "type": "object",
+                    "properties": {
+                      "service_provider_id": {
+                        "type": "integer"
+                      },
+                      "zone_id": {
+                        "type": "integer"
+                      },
+                      "category_id": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "service_provider_id",
+                      "zone_id",
+                      "category_id",
+                      "title",
+                      "description"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete service_request",
+        "tags": [
+          "Service Requests"
+        ],
+        "responses": {
+          "204": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/zones": {
+      "get": {
+        "summary": "list zones",
+        "tags": [
+          "Zones"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "localhost:4000"
+        }
+      }
+    }
+  ]
+}
