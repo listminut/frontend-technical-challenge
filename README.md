@@ -18,7 +18,7 @@ Other libraries we use include (but you are free to use whatever you want):
 
 ## Requirements
 
-- [ ] The app should be built using Typescript, and is setup to be built with React. You may use any other libraries you wish. (If you are not familiar with React, feel free to use another framework, but you will need create it from scratch).
+- [ ] The app should be built using Typescript, and is setup for you to use React. You may use any other libraries you wish. (If you are not familiar with React, feel free to use another framework, but you will need create it from scratch).
 - [ ] The app should connect the provider API server. You can find the instructions for running the server in [Running the server](#running-the-server).
 - [ ] The app should allow users to:
   - [ ] Search for providers by category.
@@ -29,7 +29,7 @@ Other libraries we use include (but you are free to use whatever you want):
   - [ ] Cancel a service request
   - [ ] Update the details of the service request
 
-##### Bonus
+#### Bonus
 - [ ] Add specs for your components, or E2E tests.
 - [ ] Add filtering to the provider list based on the API's filtering options.
 
@@ -43,7 +43,7 @@ You can choose to develop the client in any way you wish. The `docker-compose.ym
 
 The server is a simple Ruby on Rails app, but you don't need to know Ruby nor have it installed to run it. You will need to have [Docker](https://docs.docker.com/get-docker/) installed.
 
-##### Option 1: Running the server and client with docker-compose
+#### Option 1: Running the server and client with docker-compose
 
 1. Clone the repo:
 ```
@@ -65,7 +65,7 @@ docker-compose run server rails db:setup
 
 Don't hesitate to reach out if you have any questions or run into any issues.
 
-##### Option 2: Running the server and client separately
+#### Option 2: Running the server and client separately
 
 1. Clone the repo: 
 ```
