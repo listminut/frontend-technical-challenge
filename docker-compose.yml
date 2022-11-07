@@ -23,7 +23,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./client:/app:cached
+      - /app/node_modules
+      - ./client:/app
 
   db:
     image: postgres:14.0

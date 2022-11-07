@@ -1,4 +1,4 @@
-# Ring Twice Frontend Coding Challenge
+# Ring Twice Frontend Coding Challenge ✨
 
 ## Overview
 
@@ -8,13 +8,13 @@ We care about quality, not quantity and we expect this to take you 4-6 hours. If
 
 We provideryou with a simple `React` boilerplate, but you are **free to remove it in favor of your favorite framework**.
 
-Other libraries we use include: (but you are free to use whatever you want)
-- [chakra-ui](https://chakra-ui.com/) for styling
-- [react-query](https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/) for the data layer
-- [react-hook-form](https://react-hook-form.com/) for form handling
-- [react-router](https://reactrouter.com/) for routing
-- [fontawesome](https://fontawesome.com/) for icons
-- [axios](https://github.com/axios/axios) as the http client
+Other libraries we use include (but you are free to use whatever you want):
+- [chakra-ui](https://chakra-ui.com/) for styling.
+- [react-query](https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/) for the data layer.
+- [react-hook-form](https://react-hook-form.com/) for form handling.
+- [react-router](https://reactrouter.com/) for routing.
+- [fontawesome](https://fontawesome.com/) for icons.
+- [axios](https://github.com/axios/axios) as the http client.
 
 ## Requirements
 
@@ -45,11 +45,21 @@ The server is a simple Ruby on Rails app, but you don't need to know Ruby nor ha
 
 ##### Option 1: Running the server and client with docker-compose
 
-1. Clone the repo: `git clone https://github.com/listminut/frontend-technical-challenge.git`
+1. Clone the repo:
+```
+git clone https://github.com/listminut/frontend-technical-challenge.git
+```
 
-2. Run the server: `docker-compose up`
 
-3. Populate the database: `docker-compose run server rails db:create db:migrate db:seed`
+2. Run the server: 
+```
+docker-compose up
+```
+
+3. Populate the database:
+```
+docker-compose run server rails db:setup
+```
 
 3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
 
@@ -57,17 +67,30 @@ Don't hesitate to reach out if you have any questions or run into any issues.
 
 ##### Option 2: Running the server and client separately
 
-1. Clone the repo: `git clone https://github.com/listminut/frontend-technical-challenge.git`
+1. Clone the repo: 
+```
+git clone https://github.com/listminut/frontend-technical-challenge.git
+```
 
-2. Run the server: `docker-compose up server`
+2. Run the server: 
+```
+docker-compose up server
+```
 
-3. Populate the database: `docker-compose run server rails db:create db:migrate db:seed`
+3. Populate the database:
+```
+docker-compose run server rails db:setup
+```
 
 3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
 
-4. Run the client: `cd client && yarn install && yarn start`
+4. Run the client: 
+```
+cd client && yarn install && yarn start
+```
 
 
 ## Submitting your work
 
-Please submit your work by creating a private repo on Github and inviting `guilherme-andrade` as a collaborator. **Please do not fork** this repo.
+Please submit your work by creating a private repo on Github and inviting `guilherme-andrade` and `nicopir` as collaborators and notifying your Ring Twice contact person via email.
+Also, **please do not fork** this repo!

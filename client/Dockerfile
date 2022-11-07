@@ -1,4 +1,4 @@
-FROM node:16.9.0-slim
+FROM node:18.12.0-slim
 
 RUN apt-get clean && apt-get update && apt-get -yq dist-upgrade \
     && apt-get install -qqy --no-install-recommends \
@@ -12,10 +12,12 @@ RUN apt-get clean && apt-get update && apt-get -yq dist-upgrade \
 
 WORKDIR /app
 
-COPY package.json /app/
+COPY ./package.json .
+COPY ./yarn.lock .
+
 RUN yarn install
 
-COPY . /app/
+COPY . .
 
 EXPOSE 3000
 
