@@ -51,7 +51,7 @@ git clone https://github.com/listminut/frontend-technical-challenge.git
 ```
 
 
-2. Run the server: 
+2. Run the app: 
 ```
 docker-compose up
 ```
@@ -61,7 +61,7 @@ docker-compose up
 docker-compose run server rails db:setup
 ```
 
-3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
+3. The server will be running on port `4000`, and the client on port `3000`. You can access the API docs at `http://localhost:4000/api-docs`
 
 Don't hesitate to reach out if you have any questions or run into any issues.
 
@@ -84,7 +84,7 @@ docker-compose run server rails db:setup
 
 3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
 
-4. Run the client: 
+4. Run the client, which will be available on port `3000`: 
 ```
 cd client && yarn install && yarn start
 ```
