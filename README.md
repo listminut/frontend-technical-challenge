@@ -19,7 +19,7 @@ Other libraries we use include (but you are free to use whatever you want):
 ## Requirements
 
 - [ ] The app should be built using Typescript, and is setup for you to use React. You may use any other libraries you wish. (If you are not familiar with React, feel free to use another framework, but you will need create it from scratch).
-- [ ] The app should connect the provider API server. You can find the instructions for running the server in [Running the server](#running-the-server).
+- [ ] The app should connect the provider API server. You can find the instructions for running the server in [Running the app](#running-the-app).
 - [ ] The app should allow users to:
   - [ ] Search for providers by category.
   - [ ] View a list of providers that match the search criteria
@@ -34,16 +34,13 @@ Other libraries we use include (but you are free to use whatever you want):
 - [ ] Add filtering to the provider list based on the API's filtering options.
 
 
-## Accessing and Developing the Client
+## Running the app
 
 You can choose to develop the client in any way you wish. The `docker-compose.yml` file in the root of this repository will start the client and server for you. But you can also choose to run the client and server separately. Instructions for both are below.
 
-## Running the server
+The server is a simple Ruby on Rails app, but you don't need to know Ruby nor have it installed to run it. You will need to have [Docker](https://docs.docker.com/get-docker/) installed though.
 
-
-The server is a simple Ruby on Rails app, but you don't need to know Ruby nor have it installed to run it. You will need to have [Docker](https://docs.docker.com/get-docker/) installed.
-
-#### Option 1: Running the server and client with docker-compose
+#### Option 1: Running the server and client with docker
 
 1. Clone the repo:
 ```
