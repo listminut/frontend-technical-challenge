@@ -6,7 +6,7 @@ This is a simple coding challenge to test your ability to work with a modern fro
 
 We care about quality, not quantity and we expect this to take you 4-6 hours. If you find yourself spending more time than that, or don't have the time to complete the exercise, please stop and submit what you have. We want to see how you approach the problem, not how much you can get done.
 
-We provideryou with a simple `React` boilerplate, but you are **free to remove it in favor of your favorite framework**.
+We provide you with a simple `React` boilerplate, but you are **free to remove it in favor of your favorite framework**.
 
 Other libraries we use include (but you are free to use whatever you want):
 - [chakra-ui](https://chakra-ui.com/) for styling.
@@ -18,8 +18,8 @@ Other libraries we use include (but you are free to use whatever you want):
 
 ## Requirements
 
-- [ ] The app should be built using React and Typescript. You may use any other libraries you wish. (If you are not familiar with react, feel free to use another framework, but you will need create it from scratch).
-- [ ] The app should connect the provider API server. You can find the instructions for running the server in #running-the-server.
+- [ ] The app should be built using Typescript, and is setup to be built with React. You may use any other libraries you wish. (If you are not familiar with React, feel free to use another framework, but you will need create it from scratch).
+- [ ] The app should connect the provider API server. You can find the instructions for running the server in [Running the server](#running-the-server).
 - [ ] The app should allow users to:
   - [ ] Search for providers by category.
   - [ ] View a list of providers that match the search criteria
