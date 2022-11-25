@@ -58,7 +58,7 @@ docker-compose up
 
 3. Populate the database:
 ```
-docker-compose run server rails db:setup
+docker-compose run server rails db:create db:migrate db:seed
 ```
 
 3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
@@ -79,7 +79,7 @@ docker-compose up server
 
 3. Populate the database:
 ```
-docker-compose run server rails db:setup
+docker-compose run server rails db:create db:migrate db:seed
 ```
 
 3. The server will be running on port `4000`. You can access the API docs at `http://localhost:4000/api-docs`
