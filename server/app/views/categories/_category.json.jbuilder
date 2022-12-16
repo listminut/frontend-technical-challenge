@@ -1,1 +1,1 @@
-json.(zone, :id, :name, :created_at, :updated_at)
+json.(category, :id, :name, :created_at, :updated_at)
